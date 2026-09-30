@@ -8,33 +8,8 @@ class Users extends BaseController
     {
         helper('url');
 
-        $users = [
-            [
-                'username' => 'admin.rose',
-                'full_name' => 'Rose Nguyen',
-                'role' => 'Administrator',
-            ],
-            [
-                'username' => 'cashier.dylan',
-                'full_name' => 'Dylan Foster',
-                'role' => 'Cashier',
-            ],
-            [
-                'username' => 'manager.juan',
-                'full_name' => 'Juan Rivera',
-                'role' => 'Manager',
-            ],
-            [
-                'username' => 'ops.kim',
-                'full_name' => 'Kim Parker',
-                'role' => 'Operations',
-            ],
-            [
-                'username' => 'support.zoe',
-                'full_name' => 'Zoe Martin',
-                'role' => 'Support',
-            ],
-        ];
+        $userModel = new \App\Models\UserModel();
+        $users = $userModel->findAll();
 
         return view('users/index', [
             'title' => 'User Accounts',

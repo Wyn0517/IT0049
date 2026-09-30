@@ -22,7 +22,7 @@
                     <tr>
                         <td><?= esc($user['username']) ?></td>
                         <td><?= esc($user['full_name']) ?></td>
-                        <td><span class="role-badge"><?= esc($user['role']) ?></span></td>
+                        <td><span class="role-badge"><?= esc($user['role'] ?? 'User') ?></span></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

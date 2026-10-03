@@ -53,6 +53,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `full_name` varchar(100) NOT NULL,
+  `role` varchar(50) DEFAULT 'User',
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
@@ -65,7 +66,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user1','User One','2026-10-01 00:47:31'),(2,'user2','User Two','2026-10-01 00:47:31'),(3,'user3','User Three','2026-10-01 00:47:31'),(4,'user4','User Four','2026-10-01 00:47:31'),(5,'user5','User Five','2026-10-01 00:47:31');
+INSERT INTO `users` VALUES (1,'jsmith','John Smith','Admin','2026-10-01 00:47:31'),(2,'jdoe','Jane Doe','Manager','2026-10-01 00:47:31'),(3,'mjohnson','Michael Johnson','Cashier','2026-10-01 00:47:31'),(4,'edavis','Emily Davis','Cashier','2026-10-01 00:47:31'),(5,'dwilson','David Wilson','Staff','2026-10-01 00:47:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

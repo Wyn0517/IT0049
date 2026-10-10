@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= esc($title ?? 'POS Lite') ?> | POS Lite</title>
     <meta name="description" content="A clean point-of-sale interface for customers and staff records.">
-    <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/styles.css') ?>?v=3">
 </head>
 <body>
     <div class="page-shell">

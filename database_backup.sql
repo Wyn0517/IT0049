@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: tfa2_pos
+-- Host: localhost    Database: tfa3_pos
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 
@@ -54,6 +54,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `full_name` varchar(100) NOT NULL,
   `role` varchar(50) DEFAULT 'User',
+  `avatar` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
@@ -66,7 +67,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'jsmith','John Smith','Admin','2026-10-01 00:47:31'),(2,'jdoe','Jane Doe','Manager','2026-10-01 00:47:31'),(3,'mjohnson','Michael Johnson','Cashier','2026-10-01 00:47:31'),(4,'edavis','Emily Davis','Cashier','2026-10-01 00:47:31'),(5,'dwilson','David Wilson','Staff','2026-10-01 00:47:31');
+INSERT INTO `users` VALUES (1,'jsmith','John Smith','Admin',NULL,'2026-10-01 00:47:31'),(2,'jdoe','Jane Doe','Manager',NULL,'2026-10-01 00:47:31'),(3,'mjohnson','Michael Johnson','Cashier',NULL,'2026-10-01 00:47:31'),(4,'edavis','Emily Davis','Cashier',NULL,'2026-10-01 00:47:31'),(5,'dwilson','David Wilson','Staff',NULL,'2026-10-01 00:47:31');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
